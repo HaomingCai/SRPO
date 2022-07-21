@@ -1,8 +1,8 @@
-name: ECCVReb_SPDOx4_Kernel_03_02
+name: ECCVReb_SPDOx2
 suffix: ~  # add suffix to saved images
 model: sr
 distortion: sr
-scale: 4
+scale: 2
 crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
 gpu_ids: [7]
 
@@ -21,19 +21,19 @@ network_G:
   offset_up_type : nearest # bilinear or nearest
 
   l1_c : 16
-  l1_k : 3
+  l1_k : 5
 
   l2_c : 16
-  l2_k : 3
+  l2_k : 5
 
   l3_c : 2
-  l3_k : 3
+  l3_k : 5
 
 path:
   pretrain_model_G: # Set your path
 
 #### training settings: learning rate scheme, loss
 train:
-  output_set: V3_10
+  output_set: 
   offset_up_mode_train: bilinear # bilinear or nearest
   offset_up_mode_test: nearest
